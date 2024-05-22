@@ -119,12 +119,12 @@ void loop()
     Serial.print("\t");
     RPM = 0;
   }
-  
+
   if (Firebase.ready() && signupOK && (micros() - sendDataPrevMillis > 3000000 || sendDataPrevMillis == 0))
   {
     sendDataPrevMillis = micros();
-    
-    if (Firebase.RTDB.setInt(&fbdo, "test/int", temperatureC))                                  // Write an Int number on the database path test/int
+
+    if (Firebase.RTDB.setInt(&fbdo, "test/temperature C", temperatureC))                                  // Write an Int number on the database path test/int
     {
       Serial.println("PASSED");
       Serial.println("PATH: " + fbdo.dataPath());
@@ -135,8 +135,8 @@ void loop()
       Serial.println("FAILED");
       Serial.println("REASON: " + fbdo.errorReason());
     }
-    
-    if (Firebase.RTDB.setFloat(&fbdo, "test/float", SPM))                                       // Write an Float number on the database path test/float
+
+    if (Firebase.RTDB.setFloat(&fbdo, "test/SPM", SPM))                                       // Write an Float number on the database path test/float
     {
       Serial.println("PASSED");
       Serial.println("PATH: " + fbdo.dataPath());
