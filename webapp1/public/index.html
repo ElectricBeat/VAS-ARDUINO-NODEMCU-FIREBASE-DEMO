@@ -1,0 +1,39 @@
+<!-- Complete Project Details at: https://RandomNerdTutorials.com/ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESP Firebase App</title>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-database.js"></script>
+
+    <script>
+    // REPLACE WITH YOUR web app's Firebase configuration
+    var firebaseConfig = {
+        apiKey: "AIzaSyDM0wJTWA-gsKt-hdw0FcOYYAyzVsgX_Jg",
+        authDomain: "test1-3bf8c.firebaseapp.com",
+        databaseURL: "https://test1-3bf8c-default-rtdb.asia-southeast1.firebasedatabase.app",
+        projectId: "test1-3bf8c",
+        storageBucket: "test1-3bf8c.appspot.com",
+        messagingSenderId: "345663207606",
+        appId: "1:345663207606:web:5c6f50fd7048e8f3df4e17"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    var database = firebase.database();
+</script>
+<script src="app.js" defer></script>
+
+</head>
+<body>
+    <h1>ESP8266 Firebase Web App Example</h1>
+    <p>Reading TemperatureC: <span id="reading-temperatureC"></span></p>
+    <p>Reading SPM: <span id="reading-SPM"></span></p>
+</body>
+</html>
